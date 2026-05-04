@@ -1,0 +1,24 @@
+meta {
+  name: 07 - Update User - 404 Not Found
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:8080/api/v1/users/9999
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "type": "CUSTOMER",
+    "name": "Ghost User",
+    "email": "ghost@email.com",
+    "login": "ghost"
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: 12 - Update Address - 404 Not Found
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:8080/api/v1/users/9999/address
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "zipCode": "90035-190",
+    "countryCode": "BR",
+    "stateCode": "RS",
+    "city": "Porto Alegre",
+    "street": "Avenida Ipiranga",
+    "number": "6681",
+    "complement": null
+  }
+}

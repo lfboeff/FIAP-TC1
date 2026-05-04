@@ -1,0 +1,24 @@
+meta {
+  name: 05 - Update User - 400 Validation Errors
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:8080/api/v1/users/1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "type": null,
+    "name": "",
+    "email": "not-an-email",
+    "login": "ab"
+  }
+}
